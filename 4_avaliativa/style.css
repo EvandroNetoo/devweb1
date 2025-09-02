@@ -1,0 +1,110 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: lighter;
+}
+
+nav {
+    width: 100%;   
+}
+nav img {
+    width: 100%;   
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1000px;
+}
+
+.corpo-noticia {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+}
+
+.economia-logo {
+    text-align: center;
+    font-family: cursive;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.noticia {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.noticia h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.imagem-noticia-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.imagem-noticia-cap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.imagem-noticia {
+    width: 100%;
+}
+
+.imagem-noticia-descricao {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.imagem-noticia-fonte {
+    font-size: 12px;
+    color: gray;
+}
+
+.metadados-noticia {
+    font-size: 12px;
+}
+
+.metadados-noticia-autor, .metadados-noticia-colaboracao {
+    font-weight: bold;
+}
+
+.metadados-noticia-datahora-publicacao-container {
+    display: flex;
+    gap: 8px;
+    color: gray;
+}
+
+.link {
+    text-decoration: underline;
+    color:cornflowerblue;
+    font-weight: bold;
+}
+
+.pl-3 {
+    padding-left: 12px;
+}

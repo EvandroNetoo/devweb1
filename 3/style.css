@@ -1,0 +1,108 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Layout principal */
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    padding: 16px;
+    margin: 0 auto;
+}
+
+/* Estrutura da notícia */
+.noticia {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-size: 20px;
+}
+
+/* Cabeçalho */
+.cabecalho-noticia {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cabecalho-noticia h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.cabecalho-noticia .autor {
+    font-size: 14px;
+    display: flex;
+    gap: 16px;
+    color: gray;
+}
+
+.datahora-postagem {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Imagem da notícia */
+.imagem-noticia {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.imagem-noticia img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.imagem-noticia .sobre {
+    margin-left: 24px;
+    font-size: 14px;
+}
+
+.imagem-noticia .sobre .fonte {
+    color: gray;
+}
+
+/* Corpo da notícia */
+.corpo-noticia {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.corpo-noticia h3 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+/* Elementos globais */
+a {
+    text-decoration: underline;
+    color: brown;
+    font-weight: 600;
+}
+
+/* Listas */
+ul li::marker {
+    color: brown;
+}
+
+ul li {
+    list-style-type: square;
+    padding-bottom: 16px;
+}
+
+/* Rodapé */
+.rodape-noticia {
+    font-style: italic;
+}

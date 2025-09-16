@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades de Medida CSS - Demonstração Prática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Unidades de Medida CSS</h1>
+            <p class="subtitle">Demonstração Prática para Apresentação Acadêmica</p>
+        </header>
+
+        <!-- Medidas Absolutas -->
+        <section class="section">
+            <h2>Medidas Absolutas</h2>
+            <p class="description">Unidades fixas que não mudam com base no contexto</p>
+
+            <div class="examples-grid">
+                <!-- Pixels -->
+                <div class="example-card">
+                    <h3>Pixels (px)</h3>
+                    <div class="demo-box pixels">200px</div>
+                    <p>Unidade mais comum. 1px = 1 pixel na tela</p>
+                    <code>width: 200px;</code>
+                </div>
+
+                <!-- Inches -->
+                <div class="example-card">
+                    <h3>Inches (in)</h3>
+                    <div class="demo-box inches">2in</div>
+                    <p>Polegadas. 1in = 96px = 2.54cm</p>
+                    <code>width: 2in;</code>
+                </div>
+
+                <!-- Picas -->
+                <div class="example-card">
+                    <h3>Picas (pc)</h3>
+                    <div class="demo-box picas">12pc</div>
+                    <p>1pc = 1/6 de polegada = 16px</p>
+                    <code>width: 12pc;</code>
+                </div>
+
+                <!-- Centimeters -->
+                <div class="example-card">
+                    <h3>Centímetros (cm)</h3>
+                    <div class="demo-box centimeters">5cm</div>
+                    <p>1cm = 96px/2.54 = 37.8px</p>
+                    <code>width: 5cm;</code>
+                </div>
+
+                <!-- Millimeters -->
+                <div class="example-card">
+                    <h3>Milímetros (mm)</h3>
+                    <div class="demo-box millimeters">50mm</div>
+                    <p>1mm = 1/10 de cm = 3.78px</p>
+                    <code>width: 50mm;</code>
+                </div>
+
+                <!-- Points -->
+                <div class="example-card">
+                    <h3>Points (pt)</h3>
+                    <div class="demo-box points">144pt</div>
+                    <p>1pt = 1/72 de polegada = 1.33px</p>
+                    <code>width: 144pt;</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medidas Relativas Baseadas em Fonte -->
+        <section class="section">
+            <h2>Medidas Relativas - Baseadas em Fonte</h2>
+            <p class="description">Unidades que se baseiam no tamanho da fonte</p>
+
+            <div class="examples-grid">
+                <!-- Em -->
+                <div class="example-card">
+                    <h3>Em</h3>
+                    <div class="em-parent">
+                        <div class="demo-box ems">3em</div>
+                    </div>
+                    <p>Relativo ao font-size do elemento pai</p>
+                    <code>width: 3em; /* 3x o font-size do pai */</code>
+                </div>
+
+                <!-- Rem -->
+                <div class="example-card">
+                    <h3>Rem (Root em)</h3>
+                    <div class="demo-box rems">4rem</div>
+                    <p>Relativo ao font-size do elemento root (html)</p>
+                    <code>width: 4rem; /* 4x o font-size do html */</code>
+                </div>
+
+                <!-- Ex -->
+                <div class="example-card">
+                    <h3>Ex</h3>
+                    <div class="demo-box ex">10ex</div>
+                    <p>Altura da letra "x" minúscula da fonte</p>
+                    <code>width: 10ex;</code>
+                </div>
+
+                <!-- Ch -->
+                <div class="example-card">
+                    <h3>Ch</h3>
+                    <div class="demo-box ch">15ch</div>
+                    <p>Largura do caractere "0" da fonte</p>
+                    <code>width: 15ch;</code>
+                </div>
+
+                <!-- Cap -->
+                <div class="example-card">
+                    <h3>Cap</h3>
+                    <div class="demo-box cap">5cap</div>
+                    <p>Altura das letras maiúsculas</p>
+                    <code>width: 5cap;</code>
+                </div>
+
+                <!-- Ic -->
+                <div class="example-card">
+                    <h3>Ic</h3>
+                    <div class="demo-box ic">10ic</div>
+                    <p>Largura do caractere "水" (ideográfico)</p>
+                    <code>width: 10ic;</code>
+                </div>
+
+                <!-- Lh -->
+                <div class="example-card">
+                    <h3>Lh</h3>
+                    <div class="demo-box lh">3lh</div>
+                    <p>Altura da linha do elemento</p>
+                    <code>width: 3lh;</code>
+                </div>
+
+                <!-- Rlh -->
+                <div class="example-card">
+                    <h3>Rlh</h3>
+                    <div class="demo-box rlh">3rlh</div>
+                    <p>Altura da linha do elemento root</p>
+                    <code>width: 3rlh;</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Medidas Relativas - Porcentagem e Viewport -->
+        <section class="section">
+            <h2>📱 Medidas Relativas - Viewport e Porcentagem</h2>
+            <p class="description">Unidades que se adaptam ao tamanho da tela e do elemento pai</p>
+
+            <div class="examples-grid">
+                <!-- Porcentagem -->
+                <div class="example-card">
+                    <h3>Porcentagem (%)</h3>
+                    <div class="demo-container">
+                        <div class="demo-box percentage">50%</div>
+
+                    </div>
+                    <p>Relativo ao elemento pai</p>
+                    <code>width: 50%; /* 50% do elemento pai */</code>
+                </div>
+
+                <!-- Viewport Width -->
+                <div class="example-card">
+                    <h3>Viewport Width (vw)</h3>
+                    <div class="demo-box vw">15vw</div>
+                    <p>1vw = 1% da largura da viewport</p>
+                    <code>width: 15vw;</code>
+                </div>
+
+                <!-- Viewport Height -->
+                <div class="example-card">
+                    <h3>Viewport Height (vh)</h3>
+                    <div class="demo-box vh">15vh</div>
+                    <p>1vh = 1% da altura da viewport</p>
+                    <code>height: 15vh;</code>
+                </div>
+
+                <!-- Viewport Minimum -->
+                <div class="example-card">
+                    <h3>Viewport Min (vmin)</h3>
+                    <div class="demo-box vmin">15vmin</div>
+                    <p>1vmin = 1% do menor valor entre largura e altura</p>
+                    <code>width: 15vmin;</code>
+                </div>
+
+                <!-- Viewport Maximum -->
+                <div class="example-card">
+                    <h3>Viewport Max (vmax)</h3>
+                    <div class="demo-box vmax">15vmax</div>
+                    <p>1vmax = 1% do maior valor entre largura e altura</p>
+                    <code>width: 15vmax;</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparação Visual -->
+        <section class="section">
+            <h2>🔍 Comparação Visual</h2>
+            <p class="description">Veja como as diferentes unidades se comportam</p>
+
+            <div class="comparison-container">
+                <div class="comparison-item">
+                    <div class="demo-box pixels">200px</div>
+                    <span>200px (fixo)</span>
+                </div>
+                <div class="comparison-item">
+                    <div class="demo-box percentage">50%</div>
+                    <span>50% (relativo ao pai)</span>
+                </div>
+                <div class="comparison-item">
+                    <div class="demo-box rems">4rem</div>
+                    <span>4rem (relativo ao root)</span>
+                </div>
+                <div class="comparison-item">
+                    <div class="demo-box vw">15vw</div>
+                    <span>15vw (relativo à viewport)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informações de Compatibilidade -->
+        <section class="section">
+            <h2>Dicas e Compatibilidade</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h4>Medidas Absolutas</h4>
+                    <ul>
+                        <li>Pixels (px) - Suporte universal</li>
+                        <li>in, cm, mm, pt, pc - Melhor para impressão</li>
+                        <li>Não se adaptam a diferentes telas</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h4>Medidas Relativas</h4>
+                    <ul>
+                        <li>em/rem - Ideais para tipografia responsiva</li>
+                        <li>vw/vh - Perfeitas para layouts fluidos</li>
+                        <li>% - Clássica para layouts responsivos</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h4>Unidades Modernas</h4>
+                    <ul>
+                        <li>cap, ic, lh, rlh - Suporte limitado</li>
+                        <li>Verifique compatibilidade antes de usar</li>
+                        <li>Podem ter fallbacks necessários</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

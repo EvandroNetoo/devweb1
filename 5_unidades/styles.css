@@ -176,18 +176,9 @@ header h1 {
     background: linear-gradient(45deg, #95a5a6, #7f8c8d);
 }
 
-/* Font-relative units */
-.em-parent {
-    font-size: 20px;
-    padding: 10px;
-    background: rgba(52, 152, 219, 0.1);
-    border-radius: 5px;
-}
-
 .ems {
     width: 3em;
     background: linear-gradient(45deg, #e67e22, #d35400);
-    font-size: inherit;
 }
 
 .rems {

@@ -1,110 +1,131 @@
-/* Reset básico */
+/* Variáveis CSS */
+:root {
+    --cor-primaria: cornflowerblue;
+    --cor-secundaria: gray;
+    --fonte-principal: 'Roboto', sans-serif;
+    --fonte-secundaria: cursive;
+    --espacamento-pequeno: 4px;
+    --espacamento-medio: 8px;
+    --espacamento-grande: 12px;
+    --espacamento-extra: 16px;
+    --espacamento-maior: 20px;
+    --largura-maxima-container: 1000px;
+    --largura-maxima-noticia: 700px;
+    --tamanho-fonte-pequena: 12px;
+    --tamanho-fonte-titulo: 40px;
+}
+
+/* Reset básico - mantendo seletor global conforme solicitado */
 *,
 *::before,
 *::after {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fonte-principal);
     box-sizing: border-box;
     margin: 0;
     font-weight: lighter;
 }
 
-nav {
-    width: 100%;   
-}
-nav img {
-    width: 100%;   
-}
-
-.container {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 1000px;
-}
-
-.corpo-noticia {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    max-width: 700px;
-}
-
-.economia-logo {
-    text-align: center;
-    font-family: cursive;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-header {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.noticia {
-    padding: 0 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.noticia h1 {
-    text-align: center;
-    font-size: 40px;
-}
-
-.imagem-noticia-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.imagem-noticia-cap {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.imagem-noticia {
+/* Seletores combinados e com pseudoseletores */
+body nav {
     width: 100%;
 }
 
-.imagem-noticia-descricao {
-    font-size: 12px;
-    font-weight: bold;
+body nav img {
+    width: 100%;
 }
 
-.imagem-noticia-fonte {
-    font-size: 12px;
-    color: gray;
-}
-
-.metadados-noticia {
-    font-size: 12px;
-}
-
-.metadados-noticia-autor, .metadados-noticia-colaboracao {
-    font-weight: bold;
-}
-
-.metadados-noticia-datahora-publicacao-container {
+main.container {
+    margin: auto;
     display: flex;
-    gap: 8px;
-    color: gray;
+    flex-direction: column;
+    gap: var(--espacamento-extra);
+    max-width: var(--largura-maxima-container);
 }
 
-.link {
-    text-decoration: underline;
-    color:cornflowerblue;
+article .corpo-noticia {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-extra);
+    max-width: var(--largura-maxima-noticia);
+}
+
+main .economia-logo {
+    text-align: center;
+    font-family: var(--fonte-secundaria);
+}
+
+body main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-grande);
+}
+
+article header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-grande);
+}
+
+article.noticia {
+    padding: 0 var(--espacamento-grande);
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-maior);
+}
+
+article.noticia h1:first-of-type {
+    text-align: center;
+    font-size: var(--tamanho-fonte-titulo);
+}
+
+figure.imagem-noticia-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-medio);
+}
+
+figcaption.imagem-noticia-cap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacamento-pequeno);
+}
+
+img.imagem-noticia {
+    width: 100%;
+}
+
+h2.imagem-noticia-descricao {
+    font-size: var(--tamanho-fonte-pequena);
     font-weight: bold;
 }
 
-.pl-3 {
-    padding-left: 12px;
+p.imagem-noticia-fonte {
+    font-size: var(--tamanho-fonte-pequena);
+    color: var(--cor-secundaria);
+}
+
+div.metadados-noticia {
+    font-size: var(--tamanho-fonte-pequena);
+}
+
+p.metadados-noticia-autor,
+p.metadados-noticia-colaboracao {
+    font-weight: bold;
+}
+
+div.metadados-noticia-datahora-publicacao-container {
+    display: flex;
+    gap: var(--espacamento-medio);
+    color: var(--cor-secundaria);
+}
+
+a.link:hover {
+    text-decoration: underline;
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+h3.pl-3,
+figure.pl-3 {
+    padding-left: var(--espacamento-grande);
 }

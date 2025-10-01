@@ -1,0 +1,353 @@
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --border-color: #ddd;
+    font-size: 16px;
+    /* Root font size for rem units */
+    line-height: 1.5;
+    /* Root line height for rlh units */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin: 30px 0 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Unit Demonstration Styles */
+.unit-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.unit-box {
+    flex: 1;
+    min-width: 250px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.unit-demo {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Absolute Units Styling */
+.px-box {
+    border-left-color: #e74c3c;
+}
+
+.cm-box {
+    border-left-color: #3498db;
+}
+
+.mm-box {
+    border-left-color: #2ecc71;
+}
+
+.in-box {
+    border-left-color: #f39c12;
+}
+
+.pt-box {
+    border-left-color: #9b59b6;
+}
+
+.pc-box {
+    border-left-color: #1abc9c;
+}
+
+/* Relative Units Styling */
+.parent-element {
+    width: 300px;
+    font-size: 16px;
+    padding: 10px;
+    background-color: #eee;
+    border: 1px dashed #999;
+    margin-bottom: 10px;
+}
+
+.em-demo {
+    width: 2em;
+    /* 2 × 16px = 32px */
+    background-color: #3498db;
+}
+
+.rem-demo {
+    width: 10rem;
+    /* 10 × root font-size (16px) = 160px */
+    background-color: #2ecc71;
+}
+
+.percentage-demo {
+    width: 50%;
+    /* 50% of parent width (300px) = 150px */
+    background-color: #e74c3c;
+}
+
+/* Viewport Units */
+.viewport-units {
+    width: 100%;
+}
+
+.vw-demo {
+    width: 50vw;
+    /* 50% of viewport width */
+    background-color: #9b59b6;
+}
+
+.vh-demo {
+    height: 10vh;
+    /* 10% of viewport height */
+    background-color: #f39c12;
+}
+
+.vmin-demo {
+    width: 30vmin;
+    /* 30% of the smaller viewport dimension */
+    background-color: #1abc9c;
+}
+
+.vmax-demo {
+    width: 30vmax;
+    /* 30% of the larger viewport dimension */
+    background-color: #e67e22;
+}
+
+/* Text-Related Units */
+.text-relative-units,
+.line-height-units {
+    font-size: 18px;
+}
+
+.ch-demo {
+    width: 10ch;
+    /* Width of 10 "0" characters */
+    background-color: #3498db;
+}
+
+.ex-demo {
+    width: 10ex;
+    /* Width based on height of lowercase "x" */
+    background-color: #2ecc71;
+}
+
+.cap-demo {
+    width: 5cap;
+    /* Width based on height of capital letters */
+    background-color: #e74c3c;
+}
+
+.ic-demo {
+    width: 5ic;
+    /* Width based on "水" character */
+    background-color: #9b59b6;
+}
+
+/* Line Height Units */
+.lh-container {
+    line-height: 30px;
+    /* Setting line height for lh unit */
+}
+
+.lh-demo {
+    width: 2lh;
+    /* 2 × line-height (30px) = 60px */
+    background-color: #f39c12;
+}
+
+.rlh-demo {
+    width: 2rlh;
+    /* 2 × root line-height (1.5 × 16px) = 48px */
+    background-color: #1abc9c;
+}
+
+/* Comparison Section */
+.comparison-container {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.comparison-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.label {
+    width: 80px;
+    text-align: right;
+    padding-right: 10px;
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.bar {
+    height: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.percent-bar {
+    background-color: var(--accent-color);
+}
+
+/* Interactive Demo */
+.interactive-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.demo-box {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+
+.fixed-px {
+    width: 200px;
+    background-color: #3498db;
+}
+
+.responsive-percent {
+    width: 20%;
+    background-color: #2ecc71;
+}
+
+.responsive-vw {
+    width: 20vw;
+    background-color: #e74c3c;
+}
+
+.responsive-rem {
+    width: 12.5rem;
+    /* 12.5 × 16px = 200px */
+    background-color: #9b59b6;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid var(--border-color);
+    font-size: 0.9rem;
+    color: #777;
+}
+
+#current-width {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .unit-box {
+        min-width: 100%;
+    }
+
+    .parent-element {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Browser support notice for newer units */
+.cap-container::after,
+.ic-container::after,
+.lh-container::after,
+.rlh-container::after {
+    content: "(Note: This unit may not be supported in all browsers)";
+    display: block;
+    font-size: 0.8rem;
+    color: #777;
+    font-style: italic;
+    margin-top: 5px;
+}

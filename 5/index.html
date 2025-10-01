@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units Comparison</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS Units Comparison</h1>
+        <p>A visual guide to the differences between CSS measurement units</p>
+    </header>
+
+    <main>
+        <section id="absolute-units">
+            <h2>Absolute Units</h2>
+            <p class="description">Absolute units are fixed and do not change based on other elements or the viewport.
+                They provide exact measurements.</p>
+
+            <div class="unit-container">
+                <div class="unit-box px-box">
+                    <h3>px (pixels)</h3>
+                    <div class="unit-demo" style="width: 200px;">200px width</div>
+                    <p>Represents a single dot on the screen.</p>
+                </div>
+
+                <div class="unit-box cm-box">
+                    <h3>cm (centimeters)</h3>
+                    <div class="unit-demo" style="width: 5cm;">5cm width</div>
+                    <p>Represents a physical centimeter.</p>
+                </div>
+
+                <div class="unit-box mm-box">
+                    <h3>mm (millimeters)</h3>
+                    <div class="unit-demo" style="width: 50mm;">50mm width</div>
+                    <p>Represents a physical millimeter.</p>
+                </div>
+
+                <div class="unit-box in-box">
+                    <h3>in (inches)</h3>
+                    <div class="unit-demo" style="width: 2in;">2in width</div>
+                    <p>Represents a physical inch (2.54cm).</p>
+                </div>
+
+                <div class="unit-box pt-box">
+                    <h3>pt (points)</h3>
+                    <div class="unit-demo" style="width: 144pt;">144pt width</div>
+                    <p>Represents 1/72 of an inch.</p>
+                </div>
+
+                <div class="unit-box pc-box">
+                    <h3>pc (picas)</h3>
+                    <div class="unit-demo" style="width: 12pc;">12pc width</div>
+                    <p>Represents 1/6 of an inch.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="relative-units">
+            <h2>Relative Units</h2>
+            <p class="description">Relative units provide flexibility and responsiveness. They are based on other
+                measurements, such as the size of the parent element, the root element, or the viewport.</p>
+
+            <div class="unit-container">
+                <div class="unit-box em-box">
+                    <h3>em</h3>
+                    <div class="parent-element">
+                        Parent: font-size: 16px
+                        <div class="unit-demo em-demo">2em width = 32px</div>
+                    </div>
+                    <p>Relative to the font-size of the nearest parent element.</p>
+                </div>
+
+                <div class="unit-box rem-box">
+                    <h3>rem</h3>
+                    <div class="unit-demo rem-demo">10rem width</div>
+                    <p>Relative to the font-size of the root element (html).</p>
+                </div>
+
+                <div class="unit-box percentage-box">
+                    <h3>% (percentage)</h3>
+                    <div class="parent-element">
+                        Parent: width: 300px
+                        <div class="unit-demo percentage-demo">50% width = 150px</div>
+                    </div>
+                    <p>Relative to the size of the parent element.</p>
+                </div>
+            </div>
+
+            <div class="unit-container">
+                <div class="unit-box viewport-units">
+                    <h3>Viewport Units</h3>
+                    <div class="unit-demo vw-demo">50vw width</div>
+                    <p>vw: 1% of viewport width</p>
+
+                    <div class="unit-demo vh-demo">10vh height</div>
+                    <p>vh: 1% of viewport height</p>
+
+                    <div class="unit-demo vmin-demo">30vmin width</div>
+                    <p>vmin: 1% of the smaller viewport dimension</p>
+
+                    <div class="unit-demo vmax-demo">30vmax width</div>
+                    <p>vmax: 1% of the larger viewport dimension</p>
+                </div>
+            </div>
+
+            <div class="unit-container">
+                <div class="unit-box text-relative-units">
+                    <h3>Text-Related Units</h3>
+
+                    <div class="ch-container">
+                        <div class="unit-demo ch-demo">10ch width</div>
+                        <p>ch: Relative to width of the "0" character</p>
+                    </div>
+
+                    <div class="ex-container">
+                        <div class="unit-demo ex-demo">10ex width</div>
+                        <p>ex: Relative to x-height of the current font</p>
+                    </div>
+
+                    <div class="cap-container">
+                        <div class="unit-demo cap-demo">5cap width</div>
+                        <p>cap: Relative to height of capital letters</p>
+                    </div>
+
+                    <div class="ic-container">
+                        <div class="unit-demo ic-demo">5ic width</div>
+                        <p>ic: Relative to width of "水" character</p>
+                    </div>
+                </div>
+
+                <div class="unit-box line-height-units">
+                    <h3>Line Height Units</h3>
+
+                    <div class="lh-container">
+                        <div class="unit-demo lh-demo">2lh width</div>
+                        <p>lh: Relative to line-height of element</p>
+                    </div>
+
+                    <div class="rlh-container">
+                        <div class="unit-demo rlh-demo">2rlh width</div>
+                        <p>rlh: Relative to line-height of root element</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="unit-comparison">
+            <h2>Unit Comparison</h2>
+            <div class="comparison-container">
+                <div class="comparison-row">
+                    <div class="label">100px:</div>
+                    <div class="bar" style="width: 100px;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">1in:</div>
+                    <div class="bar" style="width: 1in;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">2.54cm:</div>
+                    <div class="bar" style="width: 2.54cm;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">25.4mm:</div>
+                    <div class="bar" style="width: 25.4mm;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">72pt:</div>
+                    <div class="bar" style="width: 72pt;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">6pc:</div>
+                    <div class="bar" style="width: 6pc;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">10%:</div>
+                    <div class="bar percent-bar" style="width: 10%;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">10vw:</div>
+                    <div class="bar" style="width: 10vw;"></div>
+                </div>
+                <div class="comparison-row">
+                    <div class="label">6.25rem:</div>
+                    <div class="bar" style="width: 6.25rem;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="interactive-demo">
+        <h2>Interactive Demo: Resize Your Browser</h2>
+        <p>See how different units respond to viewport changes:</p>
+
+        <div class="interactive-container">
+            <div class="demo-box fixed-px">
+                <p>Fixed: 200px</p>
+            </div>
+            <div class="demo-box responsive-percent">
+                <p>Responsive: 20%</p>
+            </div>
+            <div class="demo-box responsive-vw">
+                <p>Responsive: 20vw</p>
+            </div>
+            <div class="demo-box responsive-rem">
+                <p>Responsive: 12.5rem</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created to demonstrate CSS measurement units | <span id="current-width">Viewport width: <span
+                    id="width-value">0</span>px</span></p>
+    </footer>
+
+    <script>
+        // Display current viewport width
+        function updateWidth() {
+            document.getElementById('width-value').textContent = window.innerWidth;
+        }
+
+        window.addEventListener('load', updateWidth);
+        window.addEventListener('resize', updateWidth);
+    </script>
+</body>
+
+</html>

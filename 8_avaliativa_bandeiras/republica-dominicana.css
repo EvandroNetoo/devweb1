@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-blocos {
+    height: 100%;
+    width: 43.345%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bloco {
+    height: 40%;
+    width: 100%;
+}
+
+.bloco-azul {
+    background-color: blue;
+}
+
+.bloco-vermelho {
+    background-color: red;
+}
+
+.faixa-vertical {
+    height: 100%;
+    width: 13.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brasao-rd {
+    width: 100%;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+</head>
+
+<body data-theme="black">
+    <div class="min-h-screen max-w-5xl mx-auto space-y-10 p-4">
+
+        <h1 class="text-5xl text-center">Elementos Básicos</h1>
+        <div class="flex justify-center gap-4 flex-wrap ">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input Text e Input Button</legend>
+
+                <label for="nomeCompleto" class="label">Nome completo: *</label>
+                <input id="nomeCompleto" type="text" class="input" autocomplete="off"
+                    placeholder="Digite seu nome completo" />
+
+                <input type="button" class="btn btn-neutral mt-4" onclick="login()" value="Login" />
+                <button type="button" class="btn btn-neutral mt-4" onclick="sorteDoDia()">Sorte do dia</button>
+
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Password Input</legend>
+
+                <label for="senha" class="label">Senha: *</label>
+                <input id="senha" type="password" class="input" autocomplete="off" placeholder="Digite sua senha" />
+                <button id="btnVerSenha" class="btn btn-neutral mt-4" onclick="verSenha()">Ver senha</button>
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input Color</legend>
+
+                <label for="corFundo" class="label">Cor de fundo da página</label>
+                <input id="corFundo" type="color" onchange="mudaCorFundo(this.value)" />
+                <p>Cor selecionada: <span id="spanCorSelecionada">#000000 </span></p>
+
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input File</legend>
+
+                <label for="input-file" class="label">Selecione um arquivo</label>
+                <input id="input-file" type="file" class="file-input" />
+
+            </fieldset>
+
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input File com Drag and Drop</legend>
+
+                <label class="label">Selecione um arquivo</label>
+                <div id="dropZone"
+                    class="border-2 border-dashed border-base-content/30 rounded-box p-8 text-center cursor-pointer hover:border-primary hover:bg-base-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto mb-4 opacity-50" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <p class="text-sm mb-2">Arraste um arquivo aqui ou clique para selecionar</p>
+                    <p class="text-xs opacity-60">Qualquer tipo de arquivo</p>
+                </div>
+                <input id="fileInputDrop" type="file" class="hidden" />
+                <div id="fileInfo" class="mt-4 hidden">
+                    <div class="alert alert-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <div>
+                            <div class="font-bold" id="fileName"></div>
+                            <div class="text-xs" id="fileSize"></div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input Radio</legend>
+
+                <p class="label">Você é maior de 18 anos?</p>
+                <label class="label">
+                    <input type="radio" name="maiorIdade" value="sim" id="maiorIdadeSim" class="radio radio-xs"
+                        autocomplete="off" />
+                    Sim
+                </label>
+                <label class="label">
+                    <input type="radio" name="maiorIdade" value="nao" id="maiorIdadeNao" class="radio radio-xs"
+                        autocomplete="off" />
+                    Não
+                </label>
+
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input Checkbox</legend>
+
+                <p class="label">Você as frutas que você gosta?</p>
+                <label class="label">
+                    <input type="checkbox" class="checkbox checkbox-xs" name="frutas" value="banana"
+                        autocomplete="off" />
+                    Banana
+                </label>
+                <label class="label">
+                    <input type="checkbox" class="checkbox checkbox-xs" name="frutas" value="maca" autocomplete="off" />
+                    Maçã
+                </label>
+                <label class="label">
+                    <input type="checkbox" class="checkbox checkbox-xs" name="frutas" value="abacate"
+                        autocomplete="off" />
+                    Abacate
+                </label>
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input Range</legend>
+
+                <label class="label">Qual a sua idade?</label>
+                <div class="flex">
+                    <input id="idade" name="idade" type="range" min="0" max="120" value="0" class="range"
+                        autocomplete="off" oninput="mudarSpanIdade(this)" />
+                    <p id="idadeValor" aria-live="polite"
+                        class="flex items-center justify-center h-full w-10 font-semibold text-sm">0</p>
+                </div>
+
+            </fieldset>
+
+
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input Select</legend>
+
+                <label for="estado" class="label">Estado de nascimento: *</label>
+                <select id="estado" class="select">
+                    <option value="">Selecione um estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </fieldset>
+
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Input Textarea</legend>
+
+                <label for="texto" class="label">Texto:</label>
+                <textarea name="texto" id="texto" class="textarea" oninput="textoInputHandler(this)"
+                    autocomplete="off"></textarea>
+                <p><span id="tamanhoTexto">0</span>/100</p>
+
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-full border p-4 h-min">
+                <legend class="fieldset-legend">Input HTML</legend>
+
+                <label class="label">HTML:</label>
+                <div id="editor" class="!h-52"></div>
+
+
+            </fieldset>
+        </div>
+
+
+        <h1 class="text-5xl text-center">Elementos do HTML5</h1>
+        <div class="flex justify-center gap-4 flex-wrap ">
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Inputs temporais</legend>
+
+                <label for="dataNascimento" class="label">Data de nascimento: *</label>
+                <input id="dataNascimento" type="date" class="input" autocomplete="off"
+                    placeholder="Digite sua data de nascimento" />
+
+                <label for="horaEvento" class="label mt-4">Data e Hora do evento: *</label>
+                <input id="horaEvento" type="datetime-local" class="input" autocomplete="off"
+                    placeholder="Digite a data e hora do evento" />
+
+                <label for="mes" class="label mt-4">Mês: *</label>
+                <input id="mes" type="month" class="input" autocomplete="off" placeholder="Digite o mês" />
+
+                <label for="semana" class="label mt-4">Semana do ano: *</label>
+                <input id="semana" type="week" class="input" autocomplete="off" placeholder="Digite a semana do ano" />
+
+                <label for="hora" class="label mt-4">Hora: *</label>
+                <input id="hora" type="time" class="input" autocomplete="off" placeholder="Digite a hora" />
+
+            </fieldset>
+
+            <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 h-min">
+                <legend class="fieldset-legend">Inputs para formatação</legend>
+
+                <label for="email">Email</label>
+                <input id="email" type="email" class="input" autocomplete="off" placeholder="Digite seu email" />
+
+                <label for="url" class="label mt-4">URL</label>
+                <input id="url" type="url" class="input" autocomplete="off" placeholder="Digite uma URL" />
+
+                <label for="numero" class="label mt-4">Número</label>
+                <input id="numero" type="number" class="input" autocomplete="off" placeholder="Digite um número" />
+
+                <label for="search">Busca</label>
+                <input id="search" type="search" class="input" autocomplete="off" placeholder="Digite sua busca" />
+
+                <label for="telefone">Telefone</label>
+                <input id="telefone" id="telefone" type="tel" class="input" autocomplete="off" placeholder="Digite seu telefone" />
+            </fieldset>
+
+        </div>
+
+    </div>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="1.js"></script>
+</body>
+
+</html>

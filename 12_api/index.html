@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+</head>
+
+<body data-theme="black">
+    <div class="min-h-screen max-w-5xl mx-auto space-y-10 p-4">
+        <h1 class="text-5xl text-center">Dados Países</h1>
+
+        <form id="formulario" class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 mx-auto">
+            <p class="opacity-40 text-xs">Digite o nome de um país para visualizar informações sobre ele.</p>
+            <label class="label" for="nomePais">Nome do país</label>
+            <input type="text" id="nomePais" class="input" placeholder="Nome do país" />
+
+
+            <button class="btn btn-neutral mt-4">Pesquisar</button>
+            <img id="bandeira" class="mx-auto h-14">
+            <table class="table">
+                <tr>
+                    <td>Nome PT</td>
+                    <td id="nome"></td>
+                </tr>
+                <tr>
+                    <td>Sigla</td>
+                    <td id="sigla"></td>
+                </tr>
+                <tr>
+                    <td>Capital</td>
+                    <td id="capital"></td>
+                </tr>
+                <tr>
+                    <td>Continente</td>
+                    <td id="continente"></td>
+                </tr>
+                <tr>
+                    <td>População</td>
+                    <td id="populacao"></td>
+                </tr>
+                <tr>
+                    <td>Área (km²)</td>
+                    <td id="area"></td>
+                </tr>
+            </table>
+
+
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>

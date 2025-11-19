@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/imask"></script>
+</head>
+
+<body class="min-h-screen" data-theme="black">
+    <div class="mx-auto max-w-5xl p-3">
+        <h1 class="text-5xl text-center mb-6">CRUD Contatos</h1>
+        <div class="">
+            <div class="overflow-x-auto">
+                <table class="table">
+                    <!-- head -->
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>E-mail</th>
+                            <th class="text-center">Ações</th>
+                        </tr>
+                    </thead>
+                    <form id="formAdicionar" onsubmit="adicionarContato(this)">
+                        <tr class="hover:bg-base-200">
+                            <td>
+                                <input class="input" type="text" name="nome" id="nomeAdd" placeholder="Evandro Neto"
+                                    autocomplete="off">
+                            </td>
+                            <td>
+                                <input class="input" type="text" name="telefone" id="telefoneAdd"
+                                    placeholder="(00) 00000-0000" autocomplete="off">
+                            </td>
+                            <td>
+                                <input class="input" type="text" name="email" id="emailAdd"
+                                    placeholder="evandro.rsneto@gmail.com" autocomplete="off">
+                            </td>
+                            <td class="text-center">
+                                <div class="flex justify-center gap-2">
+                                    <button type="submit" class="btn btn-sm btn-success">
+                                        <i class="bi bi-plus-lg"></i>
+                                    </button>
+                                    <button type="reset" class="btn btn-sm btn-error">
+                                        <i class="bi bi-x-lg"></i>
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </form>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden">
+        <template id="templateLinha">
+            <tr id="linha__index__" class="hover:bg-base-200">
+                <td class="text-nowrap">__nome__</td>
+                <td class="text-nowrap">__telefone__</td>
+                <td class="text-nowrap">__email__</td>
+                <td>
+                    <div class="flex justify-center gap-2">
+                        <button class="btn btn-sm btn-primary" onclick="editarLinha(__index__)"><i
+                                class="bi bi-pencil-fill"></i></button>
+                        <button class="btn btn-sm btn-error" onclick="confirmarExclusão(__index__)"><i
+                                class="bi bi-trash-fill"></i></button>
+                    </div>
+                </td>
+            </tr>
+        </template>
+
+        <template id="templateFormulario">
+            <tr id="linha__index__" class="hover:bg-base-200">
+                <td>
+                    <input class="input" type="text" name="nome" placeholder="Evandro Neto" autocomplete="off"
+                        value="__nome__">
+                </td>
+                <td>
+                    <input class="input" type="text" name="telefone" placeholder="(00) 00000-0000" autocomplete="off"
+                        value="__telefone__">
+                </td>
+                <td>
+                    <input class="input" type="text" name="email" placeholder="evandro.rsneto@gmail.com"
+                        autocomplete="off" value="__email__">
+                </td>
+                <td class="text-center">
+                    <div class="flex justify-center gap-2">
+                        <button type="button" class="btn btn-sm btn-success"
+                            onclick="salvarLinha(__index__, this.closest('tr'))">
+                            <i class="bi bi-floppy-fill"></i>
+                        </button>
+                        <button type="reset" class="btn btn-sm btn-error" onclick="carregarTabela()">
+                            <i class="bi bi-x-lg"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+
+        </template>
+
+    </div>
+
+    <dialog id="modalExcluir" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box border border-white">
+            <form method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            <h3 class="text-lg font-bold">Quer mesmo excluir este contato?</h3>
+            <form class="mt-4 flex justify-between" method="dialog">
+                <button class="btn btn-primary">Fechar</button>
+                <button onclick="excluir(this)" id="btnExcluir" class="btn btn-error" autofocus>Excluir</button>
+            </form>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+
+    <script>
+        const telefoneMask = IMask(
+            document.getElementById("telefoneAdd"),
+            { mask: ['(00) 0000-0000', '(00) 00000-0000'] },
+        );
+
+        const data = [
+            { nome: "João Silva", telefone: "(11) 91234-5678", email: "joao.silva@example.com" },
+            { nome: "Maria Oliveira", telefone: "(21) 99876-5432", email: "maria.oliveira@example.com" },
+            { nome: "Carlos Souza", telefone: "(31) 98765-4321", email: "carlos.souza@example.com" }
+        ]
+
+        const modalExcluir = document.getElementById("modalExcluir");
+
+        function carregarTabela() {
+            const tbody = $("#tbody");
+            tbody.html("");
+            data.forEach((contato, index) => {
+                let linha = $("#templateLinha").html();
+                linha = linha.replaceAll("__index__", index);
+                linha = linha.replaceAll("__nome__", contato.nome);
+                linha = linha.replaceAll("__telefone__", contato.telefone);
+                linha = linha.replaceAll("__email__", contato.email);
+                tbody.append(linha);
+            });
+        }
+
+        function adicionarContato(formulario) {
+            event.preventDefault();
+            const nome = formulario.nome.value.trim();
+            const telefone = formulario.telefone.value.trim();
+            const email = formulario.email.value.trim();
+
+
+            data.push({ nome, telefone, email });
+            carregarTabela();
+            formulario.reset();
+            telefoneMask.updateValue();
+        }
+
+        function confirmarExclusão(index) {
+            $('#btnExcluir').data('index', index);
+            modalExcluir.showModal();
+        }
+
+        function editarLinha(index) {
+            carregarTabela();
+            const contato = data[index];
+            let linha = $("#templateFormulario").html();
+            linha = linha.replaceAll("__index__", index);
+            linha = linha.replaceAll("__nome__", contato.nome);
+            linha = linha.replaceAll("__telefone__", contato.telefone);
+            linha = linha.replaceAll("__email__", contato.email);
+            $(`#linha${index}`).replaceWith(linha);
+        }
+
+        function salvarLinha(index, formulario) {
+            const get = (name) => {
+                const el = formulario.querySelector(`[name="${name}"]`);
+                return el ? el.value.trim() : "";
+            }
+
+            const nome = get('nome');
+            const telefone = get('telefone');
+            const email = get('email');
+
+            if (nome === "" || telefone === "" || email === "") {
+                alert("Por favor, preencha todos os campos.");
+                return;
+            }
+
+            data[index] = { nome, telefone, email };
+            carregarTabela();
+        }
+
+        function excluir(button) {
+            const index = $(button).data('index');
+            data.splice(index, 1);
+            carregarTabela();
+        }
+
+        $(document).ready(function () {
+            carregarTabela();
+        });
+    </script>
+</body>
+
+</html>

@@ -15,50 +15,51 @@
 </head>
 
 <body class="min-h-screen" data-theme="black">
-    <div class="mx-auto max-w-5xl p-3">
-        <h1 class="text-5xl text-center mb-6">CRUD Contatos</h1>
-        <div class="">
-            <div class="overflow-x-auto">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Telefone</th>
-                            <th>E-mail</th>
-                            <th class="text-center">Ações</th>
-                        </tr>
-                    </thead>
-                    <form id="formAdicionar" onsubmit="adicionarContato(this)">
-                        <tr class="hover:bg-base-200">
-                            <td>
-                                <input class="input" type="text" name="nome" id="nomeAdd" placeholder="Evandro Neto"
-                                    autocomplete="off">
-                            </td>
-                            <td>
-                                <input class="input" type="text" name="telefone" id="telefoneAdd"
-                                    placeholder="(00) 00000-0000" autocomplete="off">
-                            </td>
-                            <td>
-                                <input class="input" type="email" name="email" id="emailAdd"
-                                    placeholder="evandro.rsneto@gmail.com" autocomplete="off">
-                            </td>
-                            <td class="text-center">
-                                <div class="flex justify-center gap-2">
-                                    <button type="submit" class="btn btn-sm btn-success">
-                                        <i class="bi bi-plus-lg"></i>
-                                    </button>
-                                    <button type="reset" class="btn btn-sm btn-error">
-                                        <i class="bi bi-x-lg"></i>
-                                    </button>
-                                </div>
-                            </td>
+    <div class="mx-auto max-w-5xl p-3 flex flex-col gap-6">
+        <h1 class="text-5xl text-center">CRUD Contatos</h1>
+        <p class="text-center opacity-50">
+            Página CRUD de contatos que lê, grava e atualiza dados no localStorage.
+        </p>
+        <div class="overflow-x-auto">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th class="text-center">Ações</th>
+                    </tr>
+                </thead>
+                <form id="formAdicionar" onsubmit="adicionarContato(this)">
+                    <tr class="hover:bg-base-200">
+                        <td>
+                            <input class="input" type="text" name="nome" id="nomeAdd" placeholder="Evandro Neto"
+                                autocomplete="off">
+                        </td>
+                        <td>
+                            <input class="input" type="text" name="telefone" id="telefoneAdd"
+                                placeholder="(00) 00000-0000" autocomplete="off">
+                        </td>
+                        <td>
+                            <input class="input" type="email" name="email" id="emailAdd"
+                                placeholder="evandro.rsneto@gmail.com" autocomplete="off">
+                        </td>
+                        <td class="text-center">
+                            <div class="flex justify-center gap-2">
+                                <button type="submit" class="btn btn-sm btn-success">
+                                    <i class="bi bi-plus-lg"></i>
+                                </button>
+                                <button type="reset" class="btn btn-sm btn-error">
+                                    <i class="bi bi-x-lg"></i>
+                                </button>
+                            </div>
+                        </td>
 
-                        </tr>
-                    </form>
-                    <tbody id="tbody">
-                    </tbody>
-                </table>
-            </div>
+                    </tr>
+                </form>
+                <tbody id="tbody">
+                </tbody>
+            </table>
         </div>
     </div>
 

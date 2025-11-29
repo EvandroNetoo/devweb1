@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="pt-br" data-bs-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cursos de Graduação - IFES Campus Colatina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-success" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-mortarboard-fill me-2"></i>
+                IFES Colatina
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Cursos de Graduação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://colatina.ifes.edu.br" target="_blank">Site Oficial</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasMenu">
+                    <i class="bi bi-list"></i> Menu
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <div class="bg-success bg-gradient text-white py-5">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">Cursos de Graduação</h1>
+            <p class="lead">Instituto Federal do Espírito Santo - Campus Colatina</p>
+            <p>Formando profissionais qualificados para o mercado de trabalho desde 2010</p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+
+        <!-- CARDS DOS CURSOS -->
+        <div class="row g-4">
+
+            <!-- CARD - Sistemas de Informação -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <i class="bi bi-laptop me-2"></i> Bacharelado
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop"
+                        class="card-img-top" alt="Sistemas de Informação">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistemas de Informação</h5>
+                        <p class="card-text">Forme-se para desenvolver, implementar e gerenciar infraestrutura de
+                            tecnologia da informação nas organizações.</p>
+                        <ul class="list-unstyled small text-muted">
+                            <li><i class="bi bi-clock me-1"></i> Duração: 4 anos</li>
+                            <li><i class="bi bi-sun me-1"></i> Turno: Integral</li>
+                            <li><i class="bi bi-people me-1"></i> Vagas: 32/ano</li>
+                        </ul>
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#modalSI">
+                            <i class="bi bi-info-circle me-1"></i> Ver detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD - Administração -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-warning text-dark">
+                        <i class="bi bi-briefcase me-2"></i> Bacharelado
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=200&fit=crop"
+                        class="card-img-top" alt="Administração">
+                    <div class="card-body">
+                        <h5 class="card-title">Administração</h5>
+                        <p class="card-text">Capacite-se para identificar e solucionar problemas no dia a dia da
+                            administração das organizações.</p>
+                        <ul class="list-unstyled small text-muted">
+                            <li><i class="bi bi-clock me-1"></i> Duração: 4 anos</li>
+                            <li><i class="bi bi-moon me-1"></i> Turno: Noturno</li>
+                            <li><i class="bi bi-people me-1"></i> Vagas: 40/ano</li>
+                        </ul>
+                        <button class="btn btn-warning w-100" data-bs-toggle="modal" data-bs-target="#modalADM">
+                            <i class="bi bi-info-circle me-1"></i> Ver detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD - Arquitetura e Urbanismo -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <i class="bi bi-building me-2"></i> Bacharelado
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=200&fit=crop"
+                        class="card-img-top" alt="Arquitetura e Urbanismo">
+                    <div class="card-body">
+                        <h5 class="card-title">Arquitetura e Urbanismo</h5>
+                        <p class="card-text">Torne-se um profissional apto a projetar edificações, interiores,
+                            paisagismo e planejamento urbano.</p>
+                        <ul class="list-unstyled small text-muted">
+                            <li><i class="bi bi-clock me-1"></i> Duração: 5 anos</li>
+                            <li><i class="bi bi-sun me-1"></i> Turno: Integral</li>
+                            <li><i class="bi bi-people me-1"></i> Vagas: 32/ano</li>
+                        </ul>
+                        <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#modalARQ">
+                            <i class="bi bi-info-circle me-1"></i> Ver detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FAQ / ACCORDION -->
+        <div class="mt-5">
+            <h3 class="mb-4"><i class="bi bi-question-circle me-2"></i>Perguntas Frequentes</h3>
+            <div class="accordion" id="faqAccordion">
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1">
+                            Como faço para ingressar nos cursos de graduação?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            As inscrições para os cursos de graduação do IFES são realizadas por meio do <strong>Sistema
+                                de Seleção Unificada (SISU)</strong>, utilizando a nota do ENEM. O processo seletivo
+                            ocorre duas vezes ao ano, geralmente em janeiro e junho.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+                            Os cursos são gratuitos?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            <strong>Sim!</strong> Todos os cursos do IFES são totalmente gratuitos. Além disso, o
+                            instituto oferece programas de <strong>assistência estudantil</strong> para apoiar os alunos
+                            em situação de vulnerabilidade socioeconômica.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+                            Onde fica o Campus Colatina?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            O IFES Campus Colatina está localizado na cidade de <strong>Colatina</strong>, no noroeste
+                            do Espírito Santo. O campus oferece infraestrutura completa com laboratórios, biblioteca,
+                            quadra esportiva e restaurante universitário.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq4">
+                            Existe estágio obrigatório?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Sim, todos os cursos de graduação possuem <strong>estágio curricular supervisionado</strong>
+                            como requisito para conclusão do curso. O IFES possui parcerias com diversas empresas e
+                            instituições da região para facilitar a inserção dos alunos no mercado de trabalho.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- OFFCANVAS MENU -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu">
+        <div class="offcanvas-header bg-success text-white">
+            <h5 class="offcanvas-title"><i class="bi bi-gear me-2"></i>Configurações</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p class="text-muted">Opções rápidas:</p>
+
+            <button id="btnTema" class="btn btn-outline-secondary w-100 mb-3">
+                <i class="bi bi-moon-fill" id="iconeTema"></i> Tema claro/escuro
+            </button>
+
+            <hr>
+
+            <h6 class="text-muted mb-3">Links Úteis</h6>
+
+            <a href="https://colatina.ifes.edu.br" target="_blank" class="btn btn-outline-success w-100 mb-2">
+                <i class="bi bi-globe me-2"></i>Site do Campus
+            </a>
+
+            <a href="https://sisu.mec.gov.br" target="_blank" class="btn btn-outline-primary w-100 mb-2">
+                <i class="bi bi-mortarboard me-2"></i>SISU
+            </a>
+
+            <a href="https://colatina.ifes.edu.br/matriculas" target="_blank"
+                class="btn btn-outline-warning w-100 mb-2">
+                <i class="bi bi-pencil-square me-2"></i>Matrículas
+            </a>
+
+            <a href="https://colatina.ifes.edu.br/assistencia-estudantil" target="_blank"
+                class="btn btn-outline-info w-100">
+                <i class="bi bi-heart me-2"></i>Assistência Estudantil
+            </a>
+        </div>
+    </div>
+
+    <!-- MODAL - Sistemas de Informação -->
+    <div class="modal fade" id="modalSI" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title"><i class="bi bi-laptop me-2"></i>Sistemas de Informação</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=300&fit=crop"
+                        class="img-fluid rounded mb-3" alt="Sistemas de Informação">
+
+                    <h6 class="text-primary">Sobre o Curso</h6>
+                    <p>O curso de Bacharelado em Sistemas de Informação visa formar profissionais para desenvolver,
+                        implementar e gerenciar uma infraestrutura de tecnologia da informação, dados e sistemas que
+                        abrangem toda a organização.</p>
+
+                    <h6 class="text-primary mt-3">Perfil do Profissional</h6>
+                    <p>O profissional de Sistemas de Informação tem a responsabilidade de desenvolver, implementar e
+                        gerenciar infraestrutura de TI (computadores e comunicação), dados (internos e externos) e
+                        sistemas organizacionais. Também faz prospecção de novas tecnologias e auxilia na sua
+                        incorporação às estratégias da organização.</p>
+
+                    <h6 class="text-primary mt-3">Área de Atuação</h6>
+                    <p>Administração de bancos de dados, desenvolvimento de sistemas, gerenciamento de redes,
+                        segurança da informação, gestão de projetos de TI, análise de dados, aplicativos integrados
+                        e telecomunicações.</p>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Modalidade:</strong> Presencial</li>
+                                <li class="list-group-item"><strong>Tipo:</strong> Bacharelado</li>
+                                <li class="list-group-item"><strong>Turno:</strong> Integral</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Duração:</strong> 4 anos</li>
+                                <li class="list-group-item"><strong>Vagas:</strong> 32 por ano</li>
+                                <li class="list-group-item"><strong>Contato:</strong> bsi.col@ifes.edu.br</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="https://www.ifes.edu.br/cursos/graduacao/sistemas-de-informacao" target="_blank"
+                        class="btn btn-primary">
+                        <i class="bi bi-box-arrow-up-right me-1"></i>Mais informações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL - Administração -->
+    <div class="modal fade" id="modalADM" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-dark">
+                    <h5 class="modal-title"><i class="bi bi-briefcase me-2"></i>Administração</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=300&fit=crop"
+                        class="img-fluid rounded mb-3" alt="Administração">
+
+                    <h6 class="text-warning">Sobre o Curso</h6>
+                    <p>O curso de Bacharelado em Administração busca formar profissionais capazes de identificar e
+                        solucionar problemas que surgem no dia a dia da administração das organizações.</p>
+
+                    <h6 class="text-warning mt-3">Perfil do Profissional</h6>
+                    <p>O profissional formado é capaz de pensar estrategicamente os processos de gestão, introduzir
+                        melhorias no processo de produção, transferir conhecimentos e delegar funções, estabelecer
+                        comunicação eficaz entre os diversos níveis da gestão, considerando a complexidade de cada nível
+                        e as necessidades de cada indivíduo.</p>
+
+                    <h6 class="text-warning mt-3">Área de Atuação</h6>
+                    <p>Gestão de organizações públicas, privadas e terceiro setor. Marketing, recursos humanos,
+                        finanças, logística, produção, empreendedorismo, consultoria empresarial e carreira acadêmica
+                        como docente e/ou pesquisador.</p>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Modalidade:</strong> Presencial</li>
+                                <li class="list-group-item"><strong>Tipo:</strong> Bacharelado</li>
+                                <li class="list-group-item"><strong>Turno:</strong> Noturno</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Duração:</strong> 4 anos</li>
+                                <li class="list-group-item"><strong>Vagas:</strong> 40 por ano</li>
+                                <li class="list-group-item"><strong>Contato:</strong> adm.col@ifes.edu.br</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="https://www.ifes.edu.br/cursos/graduacao/administracao" target="_blank"
+                        class="btn btn-warning">
+                        <i class="bi bi-box-arrow-up-right me-1"></i>Mais informações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL - Arquitetura e Urbanismo -->
+    <div class="modal fade" id="modalARQ" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title"><i class="bi bi-building me-2"></i>Arquitetura e Urbanismo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=300&fit=crop"
+                        class="img-fluid rounded mb-3" alt="Arquitetura e Urbanismo">
+
+                    <h6 class="text-danger">Sobre o Curso</h6>
+                    <p>O Bacharelado em Arquitetura e Urbanismo busca formar profissionais para atuar em atividades
+                        relacionadas a projeto e construção de edificações, paisagismo e planejamento urbano.</p>
+
+                    <h6 class="text-danger mt-3">Perfil do Profissional</h6>
+                    <p>Profissionais generalistas, capazes de compreender e traduzir as necessidades de indivíduos,
+                        grupos sociais e comunidades, com relação à concepção, organização e construção do espaço
+                        interior e exterior, abrangendo o urbanismo, a edificação, o paisagismo, a conservação do
+                        patrimônio construído e a proteção do ambiente natural.</p>
+
+                    <h6 class="text-danger mt-3">Área de Atuação</h6>
+                    <p>Projeto e construção de edificações, projetos de interiores, paisagismo, planejamento
+                        territorial e urbano, estudo de viabilidade técnica-econômica, supervisão e coordenação
+                        técnica, consultoria, vistoria, perícia e avaliação.</p>
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Modalidade:</strong> Presencial</li>
+                                <li class="list-group-item"><strong>Tipo:</strong> Bacharelado</li>
+                                <li class="list-group-item"><strong>Turno:</strong> Integral</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Duração:</strong> 5 anos</li>
+                                <li class="list-group-item"><strong>Vagas:</strong> 32 por ano</li>
+                                <li class="list-group-item"><strong>Contato:</strong> baru.col@ifes.edu.br</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <a href="https://www.ifes.edu.br/cursos/graduacao/arquitetura-e-urbanismo" target="_blank"
+                        class="btn btn-danger">
+                        <i class="bi bi-box-arrow-up-right me-1"></i>Mais informações
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btnTema = document.getElementById('btnTema');
+        const iconeTema = document.getElementById('iconeTema');
+        const html = document.documentElement;
+
+        // Verificar tema salvo no localStorage
+        const temaSalvo = localStorage.getItem('tema') || 'dark';
+        html.setAttribute('data-bs-theme', temaSalvo);
+        atualizarIcone(temaSalvo);
+
+        btnTema.addEventListener('click', () => {
+            const temaAtual = html.getAttribute('data-bs-theme');
+            const novoTema = temaAtual === 'light' ? 'dark' : 'light';
+
+            html.setAttribute('data-bs-theme', novoTema);
+            localStorage.setItem('tema', novoTema);
+            atualizarIcone(novoTema);
+        });
+
+        function atualizarIcone(tema) {
+            if (tema === 'dark') {
+                iconeTema.className = 'bi bi-sun-fill';
+            } else {
+                iconeTema.className = 'bi bi-moon-fill';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

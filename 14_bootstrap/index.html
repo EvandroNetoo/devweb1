@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário de Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h3 class="mb-0"><i class="bi bi-envelope-fill me-2"></i>Formulário de Contato</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="contactForm">
+                            <!-- Dados Pessoais -->
+                            <h5 class="text-primary border-bottom pb-2 mb-3">
+                                <i class="bi bi-person-fill me-2"></i>Dados Pessoais
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-8">
+                                    <label for="nome" class="form-label">
+                                        Nome Completo <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                        <input type="text" class="form-control" id="nome" name="nome"
+                                            placeholder="Digite seu nome completo" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="dataNascimento" class="form-label">
+                                        Data de Nascimento <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                        <input type="date" class="form-control" id="dataNascimento"
+                                            name="dataNascimento" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5 class="text-primary border-bottom pb-2 mb-3">
+                                <i class="bi bi-house-fill me-2"></i>Endereço
+                            </h5>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-3">
+                                    <label for="cep" class="form-label">
+                                        CEP <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-mailbox"></i></span>
+                                        <input type="text" class="form-control" id="cep" name="cep"
+                                            placeholder="00000-000" maxlength="9" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-7">
+                                    <label for="logradouro" class="form-label">
+                                        Logradouro <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="logradouro" name="logradouro"
+                                        placeholder="Rua, Avenida, etc." required>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <label for="numero" class="form-label">
+                                        Número <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="numero" name="numero" placeholder="Nº"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-4">
+                                    <label for="complemento" class="form-label">Complemento</label>
+                                    <input type="text" class="form-control" id="complemento" name="complemento"
+                                        placeholder="Apto, Bloco, etc.">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="bairro" class="form-label">
+                                        Bairro <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="bairro" name="bairro"
+                                        placeholder="Bairro" required>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="cidade" class="form-label">
+                                        Cidade <span class="text-danger">*</span>
+                                    </label>
+                                    <input type="text" class="form-control" id="cidade" name="cidade"
+                                        placeholder="Cidade" required>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <label for="estado" class="form-label">
+                                        Estado <span class="text-danger">*</span>
+                                    </label>
+                                    <select class="form-select" id="estado" name="estado" required>
+                                        <option value="" selected disabled>Selecione</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <h5 class="text-primary border-bottom pb-2 mb-3">
+                                <i class="bi bi-telephone-fill me-2"></i>Contato
+                            </h5>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <label for="telefone" class="form-label">Telefone</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                                        <input type="tel" class="form-control" id="telefone" name="telefone"
+                                            placeholder="(00) 00000-0000">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="celular" class="form-label">
+                                        Celular <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-phone"></i></span>
+                                        <input type="tel" class="form-control" id="celular" name="celular"
+                                            placeholder="(00) 00000-0000" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="email" class="form-label">
+                                        E-mail <span class="text-danger">*</span>
+                                    </label>
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="seu@email.com" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h5 class="text-primary border-bottom pb-2 mb-3">
+                                <i class="bi bi-chat-left-text-fill me-2"></i>Mensagem
+                            </h5>
+
+                            <div class="mb-4">
+                                <label for="mensagem" class="form-label">Sua Mensagem <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" rows="4"
+                                    placeholder="Digite sua mensagem aqui..." required></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-send-fill me-2"></i>Enviar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imask"></script>
+
+    <script>
+        IMask(document.getElementById('cep'), { mask: '00000-000' });
+        IMask(document.getElementById('telefone'), { mask: ['(00) 0000-0000', '(00) 00000-0000'] });
+        IMask(document.getElementById('celular'), { mask: ['(00) 0000-0000', '(00) 00000-0000'] });
+
+        document.getElementById('cep').addEventListener('input', async function () {
+            const cep = this.value.replace(/\D/g, '');
+            if (cep.length !== 8) return;
+
+            try {
+                const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                const data = await response.json();
+
+                if (!data.erro) {
+                    document.getElementById('logradouro').value = data.logradouro || '';
+                    document.getElementById('bairro').value = data.bairro || '';
+                    document.getElementById('cidade').value = data.localidade || '';
+                    document.getElementById('estado').value = data.uf || '';
+                }
+            } catch (error) {
+                console.error('Erro ao consultar CEP:', error);
+            } finally {
+                loading.classList.add('d-none');
+            }
+        });
+    </script>
+</body>
+
+</html>
